@@ -6,6 +6,10 @@
     --secondary: #000000;
     --1rem:16px;
     --2rem:32px;
+    --1setengah:24px;
+    --font-regular:300;
+    --font-semibold:900;
+    --font-bold:bold;
 }
 *{
     font-family: 'Inter', sans-serif;
@@ -13,7 +17,6 @@
 body{
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
     line-height: 1.6;
 }
@@ -33,7 +36,7 @@ header{
     margin-left: 10px;
     text-decoration: none;
     font-size: 1.4rem;
-    font-weight: bold;
+    font-weight: var(--font-bold);
 }
 nav ul{
     list-style-type: none;
@@ -56,14 +59,18 @@ nav a:hover{
 .hero-section{
 background-image: url(https://via.placeholder.com/1200x500);
 background-size: cover;
-height: 700px;
+height: 500px;
+background-position: center;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 .hero-content{
     text-align: center;
 }
 .hero-content h1{
     font-size: var(--2rem);
-    font-weight: bold;
+    font-weight: var(--font-bold);
 }
 .hero-content p{
     font-size: 1rem;
@@ -72,4 +79,89 @@ height: 700px;
     margin:0 auto;
     line-height: 1.6;
 }
+.hero-content .btn{
+    background-color: rgb(149, 61, 231);
+    font-size: var(--1rem);
+    color: var(--primary);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 5px;
+}
+.btn:hover{
+    background-color: #555;
+}
 /* Hero Section End */
+
+/* Doctors Section */
+.medicine-section{
+    padding: var(--2rem);
+    text-align: center;
+}
+.medicine-section h3{
+    font-size: var(--1setengah);
+    font-weight: var(--font-semibold);
+}
+.medicine-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--1rem);
+}
+.medicine-items{
+    border-radius: 10px;
+    box-shadow:0 0 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.medicine-items img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.medicine-items p{
+    font-size: var(--1rem);
+    font-weight: var(--font-semibold);
+    margin: 0;
+    padding: 10px;
+}
+/* Doctors Section End */
+
+/* Testimonial Section */
+.testimonial-section{
+    padding: var(--2rem);
+    text-align: center;
+}
+.testimonial-section h3{
+    font-size: var(--1setengah);
+    font-weight: var(--font-semibold);
+}
+.testimonial-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--1rem);
+}
+.testimonial-items{
+    border-radius: 10px;
+    box-shadow:0 0 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.testimonial-items img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.testimonial-items-text{
+ margin: 0;
+ padding: 10px;   
+}
+.testimonial-items h3{
+    font-size: var(--1rem);
+    font-weight: var(--font-semibold);
+}
+.testimonial-items p{
+    font-size: var(--1rem);
+    font-weight: var(--font-regular);
+}
+
+/* Testimonial Section End */

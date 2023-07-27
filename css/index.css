@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Poppins:wght@300&display=swap');
+
+:root{
+    --primary: #ffff;
+    --secondary: #000000;
+    --1rem:16px;
+    --2rem:32px;
+}
+*{
+    font-family: 'Inter', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+header{
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.logo .logo-web-rumah-sakit{
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+}
+nav li{
+    margin-right: 30px;
+ 
+}
+nav a{
+    color: var(--secondary);
+    text-decoration: none;
+}
+nav a:hover{
+    color: blue;
+}
+/* Navigation Bar End*/
+
+/* Hero Section */
+.hero-section{
+background-image: url(https://via.placeholder.com/1200x500);
+background-size: cover;
+height: 700px;
+}
+.hero-content{
+    text-align: center;
+}
+.hero-content h1{
+    font-size: var(--2rem);
+    font-weight: bold;
+}
+.hero-content p{
+    font-size: 1rem;
+    font-weight:500;
+    max-width: 600px;
+    margin:0 auto;
+    line-height: 1.6;
+}
+/* Hero Section End */

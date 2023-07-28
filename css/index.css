@@ -31,7 +31,14 @@ header{
     justify-content: space-between;
     align-items:center;
 }
-
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    height: 50px;
+}
 .logo .logo-web-rumah-sakit{
     margin-left: 10px;
     text-decoration: none;
@@ -41,6 +48,7 @@ header{
 nav ul{
     list-style-type: none;
     display: flex;
+    margin: 0;
 }
 nav li{
     margin-right: 30px;
@@ -165,3 +173,60 @@ align-items: center;
 }
 
 /* Testimonial Section End */
+
+/* Footer */
+footer{
+    background-color: #333;
+    color: var(--primary);
+    padding: var(--2rem);
+}
+.footer-left h3{
+    margin: 0;
+    font-weight: var(--font-semibold);
+}
+.footer-left p{
+    font-size: var(--1rem);
+}
+.footer-right{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.footer-grid h4{
+    font-weight: var(--font-semibold);
+}
+.footer-grid ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.footer-grid li{
+    margin-bottom: 5px;
+}
+
+.footer-link{
+    position: relative;
+    text-decoration: none;
+    color: var(--primary);
+    transition: all 0.2s ease;
+}
+.footer-link::after{
+    content: "";
+    position: absolute;
+    background-color: tomato;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -8px;
+    transition: all 0.3s ease-in-out;
+
+}
+.footer-link:hover{
+    color: #777;
+}
+.footer-link:hover::after{
+    width: 100%;
+}
+.footer-bottom{
+    text-align: center;
+}
+/* Footer End */

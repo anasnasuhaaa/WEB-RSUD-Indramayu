@@ -36,21 +36,23 @@
         <div class="search">
             <span>Nama Dokter</span>
             <input type="search" class="column" placeholder="Cari Nama Dokter">
+            <span class="icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+            
         </div>
         <div class="select-spesialist">
             <span>Spesialisasi</span>
             <select class="column">
+                <option value="0">Semua</option>
                 <option value="1">Bedah</option>
-                <option value="2">Jantung</option>
                 <option value="3">Jiwa</option>
                 <option value="4">THT</option>
                 <option value="5">Anak</option>
-                <option value="6">Gigi</option>
             </select>
         </div>
         <div class="hari">
             <span>Pilih Hari Kunjungan</span>
             <select name="hari" class="column">
+                <option value="0">Semua</option>
                 <option value="1">Senin</option>
                 <option value="2">Selasa</option>
                 <option value="3">Rabu</option>
@@ -62,56 +64,94 @@
         </div>
     </label>
     </form>
+
     <div class="foto-doctor">
         <h3>Daftar Dokter Di RSUD Kabupaten Indramayu</h3>
         <div class="medicine-grid">
+            
             <div class="medicine-items">
-                <img src="https://picsum.photos/200?random-1" alt="Doctors 1">
-                <p>Doctors 1</p>
+                <img src="img/dokter02.jpg" alt="Doctors 1">
+                <button class="accordion">dr. Ayu Lestari, Sp.A</button>
+                <div class="panel">
+                    <p>Dokter profresional lulusan Fakultas Kedokteran UI dengan jurusan Ilmu Kesehatan Anak, berpengalaman selama lebih dari 5 tahun dalam menangani segala kasus anak</p>
+                  </div>
             </div>
             <div class="medicine-items">
-                <img src="https://picsum.photos/200?random-2" alt="Doctors 2">
-                <p>Doctors 2</p>
+                <img src="img/dokter04.jpg" alt="Doctors 2">
+                <button class="accordion">dr. Annisa Rahmania Yulman, Sp.A</button>
+                <div class="panel">
+                    <p>Dokter profresional lulusan terbaik Fakultas Kedokteran UGM tahun 2015. Berpengalaman selama lebih dari 7 tahun dalam menangani segala kasus khususnya yang terkait dengan anak</p>
+                  </div>
             </div>
             <div class="medicine-items">
-                <img src="https://picsum.photos/200?random-3" alt="Doctors 3">
-                <p>Doctors 3</p>
+                <img src="img/dokterlanang02.jpg" alt="Doctors 3">
+                <button class="accordion">dr. Yudhistira, Sp.PK</button>
+                <div class="panel">
+                  <p>Dokter Profesianal lulusan Harvard</p>
+                </div>
+            </div>
+            <div class="medicine-items">
+                <img src="img/dokterlanang01.jpg" alt="Doctors 4">
+                <button class="accordion">dr. Andy Omega, Sp.An</button>
+                <div class="panel">
+                  <p>Dokter Profesional spesialis Patalogi Anatomi</p>
+                </div>
+            </div>
+            <div class="medicine-items">
+                <img src="img/dokterlanang03.jpg" alt="Doctors 1">
+                <button class="accordion">dr. Darwin Harpin, Sp.Ak</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <div class="medicine-items">
+                <img src="img/dokterlanang05.jpg" alt="Doctors 2">
+                <button class="accordion">Section 1</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <div class="medicine-items">
+                <img src="img/dokter05.jpg" alt="Doctors 3">
+                <button class="accordion">dr. Gisela Haza Anissa, Sp.M</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <div class="medicine-items">
+                <img src="img/dokter03.jpg" alt="Doctors 4">
+                <button class="accordion">dr. Mila Maidarti, Sp.OG(K), PhD</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <div class="medicine-items">
+                <img src="img/dokterlanang07.jpg" alt="Doctors 1">
+                <button class="accordion">Section 1</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <div class="medicine-items">
+                <img src="https://rs.ui.ac.id/assets/document/profil/1677736758.png" alt="Doctors 2">
+                <button class="accordion">dr. R. Fera Ibrahim, M.Sc, Ph.D, Sp.MK(K)</button>
+                <div class="panel">
+                  <p>Dokter Profesional dengan keahlian Mikrobiologi Klinik, berpengalaman selama lebih dari 15 tahun</p>
+                </div>
+            </div>
+            <div class="medicine-items">
+                <img src="https://rs.ui.ac.id/assets/document/profil/1677737574.png" alt="Doctors 3">
+                <button class="accordion">dr. Zarah Tin Cahyaningrum</button>
+                <div class="panel">
+                  <p>Dokter Profesional yang berperan sebagai dokter umum</p>
+                </div>
             </div>
             <div class="medicine-items">
                 <img src="https://picsum.photos/200?random-4" alt="Doctors 4">
-                <p>Doctors 4</p>
-            </div>
-            <div class="medicine-items">
-                <img src="https://picsum.photos/200?random-1" alt="Doctors 1">
-                <p>Doctors 1</p>
-            </div>
-            <div class="medicine-items">
-                <img src="https://picsum.photos/200?random-2" alt="Doctors 2">
-                <p>Doctors 2</p>
-            </div>
-            <div class="medicine-items">
-                <img src="https://picsum.photos/200?random-3" alt="Doctors 3">
-                <p>Doctors 3</p>
-            </div>
-            <div class="medicine-items">
-                <img src="https://picsum.photos/200?random-4" alt="Doctors 4">
-                <p>Doctors 4</p>
-            </div>
-            <div class="medicine-items">
-                <img src="https://picsum.photos/200?random-1" alt="Doctors 1">
-                <p>Doctors 1</p>
-            </div>
-            <div class="medicine-items">
-                <img src="https://picsum.photos/200?random-2" alt="Doctors 2">
-                <p>Doctors 2</p>
-            </div>
-            <div class="medicine-items">
-                <img src="https://picsum.photos/200?random-3" alt="Doctors 3">
-                <p>Doctors 3</p>
-            </div>
-            <div class="medicine-items">
-                <img src="https://picsum.photos/200?random-4" alt="Doctors 4">
-                <p>Doctors 4</p>
+                <button class="accordion">Section 1</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
             </div>
         </div>
     </div>

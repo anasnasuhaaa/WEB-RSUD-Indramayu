@@ -100,10 +100,9 @@ nav .nav-link:hover::after {
 }
 /* Login End */
 /* Navigation Bar End*/
+
 /* Hero Section */
 .hero-section {
-  /* background-image: url(../img/BGimgae.png); */
-  background-size: cover;
   height: 1000px;
   box-shadow: 0 5px 50px rgba(0, 0, 0, 0.2);
   background-position: center;
@@ -183,7 +182,39 @@ nav .nav-link:hover::after {
   transform: translateX(8px);
 }
 /* Hero Section End */
-
+.reason{
+  padding: 20px 50px;
+}
+.reason h1{
+  font-size: 30px;
+}
+.reason-grid{
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.reason-icon{
+  font-size: 40px;
+  padding: 10px 20px;
+  border-radius: 50%;
+  border: 3px solid var(--purple);
+  color: var(--purple);
+  transition: all 0.3s ease;
+}
+.reason-icon:hover{
+  color: white;
+  background-color: var(--purple);
+}
+.description{
+  margin-left: 20px;
+}
+.description h2, .description p{
+  margin: 0;
+  line-height: 1.7;
+}
+/* Reason */
+/* Reason End */
 /* Facility Section */
 .facility-section {
   padding: var(--2rem);
@@ -309,10 +340,12 @@ nav .nav-link:hover::after {
 footer {
   background-color: #404040;
   color: var(--primary);
-  padding: var(--2rem);
+  padding: var(--2rem) var(--2rem) 17px var(--2rem);
   max-height: 370px;
+  height: 330px;
   max-width: 100vdh;
-  position: sticky;
+  top: 1750px;
+  z-index: -999;
 }
 .footer-left h3 {
   margin: 0;
@@ -363,6 +396,10 @@ footer {
 .footer-bottom {
   text-align: center;
 }
+.footer-bottom-reserved p{
+  margin: 0;
+  padding: 15px 0 10px 0;
+}
 .location {
   display: flex;
   justify-content: center;
@@ -393,3 +430,5 @@ iframe {
   color: var(--orange);
 }
 /* Footer End */
+
+

@@ -103,17 +103,17 @@ nav .nav-link:hover::after {
 
 /* Cari Dokter */
 .find-doctor {
-  /* margin: 0 70px; */
   margin: 10px 0;
   display: flex;
   align-items: start;
+  padding: 10px;
 }
 .form-doctor {
   padding: 20px;
-  height: 130dvh;
+  height: 100%;
   position: sticky;
-  top: 105px;
-  bottom: 105;
+  top: 100px;
+  z-index: 1;
   background-color: var(--purple);
   width: 25%;
   border-radius: 5px;
@@ -121,7 +121,7 @@ nav .nav-link:hover::after {
 }
 .form-doctor h3 {
   text-align: center;
-  margin: 0 0 67px;
+  margin: 0 0 30px;
   color: white;
   letter-spacing: 1px;
 }
@@ -135,17 +135,18 @@ nav .nav-link:hover::after {
 .hari {
   display: flex;
   flex-direction: column;
-  margin-bottom: 80px;
+  margin-bottom: 25px;
 }
 
 .column {
-  height: 50px;
+  height: 35px;
+  width: 80%;
   border: 1px solid rgb(198, 198, 198);
   border-radius: 50px;
   text-align: center;
   color: black;
   font-weight: 300;
-  font-size: 17px;
+  font-size: 15px;
   text-transform: capitalize;
   background-color: white;
 }
@@ -154,10 +155,11 @@ nav .nav-link:hover::after {
   justify-content: space-between;
 }
 .search-column {
-  width: 72% !important;
+  width: 65% !important;
 }
 .btn-search {
-  width: 25%;
+  margin-right: 89px;
+  width: 13%;
   transition: all 0.3s ease;
 }
 .btn-search:hover {
@@ -168,7 +170,7 @@ nav .nav-link:hover::after {
 }
 .jam label{
   color: white;
-  font-size: 17px;
+  font-size: 12px;
 }
 /* Foto Doctors */
 
@@ -205,10 +207,6 @@ nav .nav-link:hover::after {
   transform: scale(1.1);
 }
 .medicine-items .accordion {
-  /* font-size: var(--1rem);
-    font-weight: var(--font-semibold);
-    margin: 0;
-    padding: 10px; */
   background-color: var(--primary);
   color: var(--secondary);
   cursor: pointer;
@@ -244,10 +242,12 @@ nav .nav-link:hover::after {
 footer {
   background-color: #404040;
   color: var(--primary);
-  padding: var(--2rem);
+  padding: var(--2rem) var(--2rem) 17px var(--2rem);
   max-height: 370px;
+  height: 350px;
   max-width: 100vdh;
   top: 1750px;
+  z-index: -999;
 }
 .footer-left h3 {
   margin: 0;
@@ -297,6 +297,10 @@ footer {
 }
 .footer-bottom {
   text-align: center;
+}
+.footer-bottom-reserved p{
+  margin: 0;
+  padding: 15px 0 10px 0;
 }
 .location {
   display: flex;

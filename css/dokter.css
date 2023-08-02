@@ -5,7 +5,8 @@
 :root {
   --primary: #ffff;
   --secondary: #000000;
-  --purple: rgb(149, 61, 231);
+  --purple: #8c52ff;
+  --orange: #f36621;
   --1rem: 16px;
   --2rem: 32px;
   --1setengah: 24px;
@@ -23,9 +24,16 @@ body {
   line-height: 1.6;
 }
 
+
 /* Navigation Bar */
 header {
-  background-color: white;
+  /* Glass */
+  background: rgba(255, 255, 255, 0.23);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  /* Glass end */
   color: var(--secondary);
   padding: 1rem;
   text-align: center;
@@ -34,9 +42,8 @@ header {
   align-items: center;
   position: sticky;
   top: 0;
-  left: 0;
-  z-index: 999999;
   border-bottom: 1px solid rgb(194, 194, 194);
+  z-index: 9999;
   width: 100%;
 }
 .logo {
@@ -56,7 +63,7 @@ nav ul {
 nav li {
   margin-right: 30px;
 }
-nav a {
+nav .nav-link{
   color: var(--secondary);
   text-decoration: none;
   font-family: "Poppins", sans-serif !important;
@@ -64,7 +71,7 @@ nav a {
   letter-spacing: 1px;
   position: relative;
 }
-nav a::after {
+nav .nav-link::after {
   content: "";
   height: 2px;
   background-color: var(--secondary);
@@ -74,34 +81,54 @@ nav a::after {
   width: 0;
   transition: all 0.3s ease;
 }
-nav a:hover::after {
+nav .nav-link:hover::after {
   width: 100%;
 }
+/* Login */
+.login{
+  background-color: var(--purple);
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s ease-in-out;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: var(--font-bold);
+  letter-spacing: 1px;
+}
+.login:hover{
+  background-color:rgb(83, 23, 138);
+}
+/* Login End */
 /* Navigation Bar End*/
+
 /* Cari Dokter */
 .find-doctor {
   /* margin: 0 70px; */
-  height: 1000px;
   margin: 10px 0;
   display: flex;
   align-items: start;
 }
 .form-doctor {
   padding: 20px;
-  height: 100dvh;
+  height: 130dvh;
   position: sticky;
-  top: 0;
+  top: 105px;
+  bottom: 105;
+  background-color: var(--purple);
   width: 25%;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 .form-doctor h3 {
   text-align: center;
-  margin: 0 0 15px;
+  margin: 0 0 67px;
+  color: white;
+  letter-spacing: 1px;
 }
 .form-doctor span {
   margin-bottom: 7px;
   font-size: 15px;
+  color: white;
 }
 .search,
 .select-spesialist,
@@ -117,26 +144,36 @@ nav a:hover::after {
   border-radius: 50px;
   text-align: center;
   color: black;
+  font-weight: 300;
   font-size: 17px;
   text-transform: capitalize;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: white;
 }
-.cari{
+.cari {
   display: flex;
   justify-content: space-between;
 }
-.search-column{
+.search-column {
   width: 72% !important;
 }
-.btn-search{
+.btn-search {
   width: 25%;
   transition: all 0.3s ease;
 }
-.btn-search:hover{
+.btn-search:hover {
   background-color: #cccc;
 }
+.jam span{
+  margin-bottom: 2px;
+}
+.jam label{
+  color: white;
+  font-size: 17px;
+}
+/* Foto Doctors */
+
 .foto-doctor {
-  height: 2600px;
+  height: 1680px;
   width: 75%;
   margin-left: 12px;
   text-align: center;
@@ -149,16 +186,16 @@ nav a:hover::after {
 }
 .medicine-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 25px;
 }
 .medicine-items {
   border-radius: 10px;
-  height: 610px;
+  /* height: 610px; */
+  position: relative;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
-
 .medicine-items img {
   width: 100%;
   border-radius: 10px 10px 0 0;
@@ -183,13 +220,14 @@ nav a:hover::after {
   font-size: 20px;
   font-weight: var(--font-bold);
   margin: 0;
-  transition: 0.4s;
+  transition: all 0.4s ease;
   position: relative;
   z-index: 99;
 }
 .active,
 .accordion:hover {
-  background-color: #ccc;
+  background-color: var(--purple);
+  color: aliceblue;
 }
 .panel {
   padding: 0 18px;
@@ -197,8 +235,97 @@ nav a:hover::after {
   background-color: white;
   overflow: hidden;
 }
-.panel p{
+.panel p {
   margin: 0;
 }
-
+/* Foto Doctors End */
 /* Cari Dokter End */
+/* Footer */
+footer {
+  background-color: #404040;
+  color: var(--primary);
+  padding: var(--2rem);
+  max-height: 370px;
+  max-width: 100vdh;
+  top: 1750px;
+}
+.footer-left h3 {
+  margin: 0;
+  font-weight: var(--font-semibold);
+}
+.footer-left p {
+  font-size: var(--1rem);
+  margin: 0;
+}
+.footer-right {
+  display: flex;
+  justify-content: space-around;
+  height: 180px;
+}
+.footer-grid h4 {
+  font-weight: var(--font-semibold);
+}
+.footer-grid ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-grid li {
+  margin-bottom: 7px;
+}
+.footer-link {
+  position: relative;
+  text-decoration: none;
+  color: var(--primary);
+  transition: all 0.2s ease;
+}
+.footer-link::after {
+  content: "";
+  position: absolute;
+  background-color: var(--orange);
+  height: 1px;
+  width: 0;
+  left: 0;
+  bottom: -3px;
+  transition: all 0.3s ease-in-out;
+}
+.footer-link:hover::after {
+  width: 100%;
+}
+.footer-link:hover {
+  color: var(--orange);
+}
+.footer-bottom {
+  text-align: center;
+}
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+}
+iframe {
+  height: 100%;
+  width: 100%;
+  margin-left: 30px;
+  border-radius: 5px;
+}
+.social-media {
+  height: 60px;
+  background-color: rgb(68, 68, 68);
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fa-brands {
+  color: white;
+  margin: 0 6px;
+  transition: all 0.3s ease;
+}
+.fa-brands:hover {
+  color: var(--orange);
+}
+/* Footer End */
+

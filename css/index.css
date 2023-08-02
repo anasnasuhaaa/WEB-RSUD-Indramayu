@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Poppins:wght@300&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto+Slab:wght@300&display=swap");
 :root {
   --primary: #ffff;
   --secondary: #000000;
-  --purple:#8C52FF;
-  --orange:#F36621;
+  --purple: #8c52ff;
+  --orange: #f36621;
   --1rem: 16px;
   --2rem: 32px;
   --1setengah: 24px;
@@ -27,7 +27,13 @@ body {
 
 /* Navigation Bar */
 header {
-  background-color: white;
+  /* Glass */
+  background: rgba(255, 255, 255, 0.23);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  /* Glass end */
   color: var(--secondary);
   padding: 1rem;
   text-align: center;
@@ -36,10 +42,11 @@ header {
   align-items: center;
   position: sticky;
   top: 0;
-  width: 100%;
   border-bottom: 1px solid rgb(194, 194, 194);
+  z-index: 9999;
+  width: 100%;
 }
-.logo{
+.logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,15 +63,15 @@ nav ul {
 nav li {
   margin-right: 30px;
 }
-nav a {
+nav .nav-link{
   color: var(--secondary);
   text-decoration: none;
-  font-family: 'Poppins', sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
   font-weight: var(--font-bold);
   letter-spacing: 1px;
   position: relative;
 }
-nav a::after{
+nav .nav-link::after {
   content: "";
   height: 2px;
   background-color: var(--secondary);
@@ -74,35 +81,53 @@ nav a::after{
   width: 0;
   transition: all 0.3s ease;
 }
-nav a:hover::after {
- width: 100%;
+nav .nav-link:hover::after {
+  width: 100%;
 }
+/* Login */
+.login{
+  background-color: var(--purple);
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s ease-in-out;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: var(--font-bold);
+  letter-spacing: 1px;
+}
+.login:hover{
+  background-color:rgb(83, 23, 138);
+}
+/* Login End */
 /* Navigation Bar End*/
 /* Hero Section */
 .hero-section {
-  background-image: url(../img/BGimgae.png);
+  /* background-image: url(../img/BGimgae.png); */
   background-size: cover;
   height: 1000px;
+  box-shadow: 0 5px 50px rgba(0, 0, 0, 0.2);
   background-position: center;
   display: flex;
   justify-content: start;
   align-items: center;
-  /* animation: animate 30s ease-in-out infinite; */
+  z-index: 9;
+  animation: animate 17s ease-in-out infinite;
 }
-/* @keyframes animate{
-  0%,100%{
-    background-image: url(/img/BGimgae.png);
+@keyframes animate {
+  0%,
+  100% {
+    background-image: url(/img/bgimage/bg1.png);
   }
-  25%{
-    background-image: url();
+  25% {
+    background-image: url(/img/bgimage/bg3.png);
   }
-  50%{
-    background-image: url();
+  50% {
+    background-image: url(/img/bgimage/bg2.png);
   }
-  75%{
-    background-image: url();
+  75% {
+    background-image: url(/img/bgimage/bg4.png);
   }
-} */
+}
 .hero-content {
   text-align: left;
   margin-left: 90px;
@@ -119,7 +144,7 @@ nav a:hover::after {
   margin: 0 auto;
   line-height: 1.6;
 }
-.btn{
+.btn {
   justify-content: flex;
   justify-content: space-between;
   align-items: center;
@@ -127,7 +152,7 @@ nav a:hover::after {
   min-width: 600px;
   font-family: "poppins", sans-serif !important;
 }
- .btn .btn-about{
+.btn .btn-about {
   background-color: var(--purple);
   font-size: var(--1rem);
   color: var(--primary);
@@ -135,16 +160,15 @@ nav a:hover::after {
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  transition:all .55s ease;
+  transition: all 0.55s ease;
   margin-right: 20px;
 }
- .btn .btn-about:hover {
-  background-color:  rgb(83, 23, 138);
+.btn .btn-about:hover {
+  background-color: rgb(83, 23, 138);
   color: var(--primary);
-  /* border: 2px solid var(--primary); */
   transform: translateY(-8px);
 }
-.btn .btn-find-doctor{
+.btn .btn-find-doctor {
   background-color: transparent;
   font-size: var(--1rem);
   font-weight: var(--font-semibold);
@@ -153,21 +177,55 @@ nav a:hover::after {
   border: 2px solid var(--purple);
   border-radius: 50px;
   cursor: pointer;
-  transition: all .55s ease;
+  transition: all 0.55s ease;
 }
- .btn .btn-find-doctor:hover {
+.btn .btn-find-doctor:hover {
   transform: translateX(8px);
 }
 /* Hero Section End */
 
-/* Doctors Section */
-.medicine-section {
+/* Facility Section */
+.facility-section {
   padding: var(--2rem);
   text-align: center;
+  background-image: url(/img/imgfacility/facility-background.png);
+  display:flex ;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.medicine-section h3 {
-  font-size: var(--1setengah);
+.facility-section h3 {
+  font-size: 36px;
   font-weight: var(--font-semibold);
+  letter-spacing: 1px;
+  max-width:200px;
+  /* background-color: rgb(163, 240, 255); */
+  color: black;
+  padding: 10px 20px;
+  margin: 0 auto;
+  right: 840px;
+  position: relative;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.facility-section .btn-facility{
+  margin-top: 20px;
+  border-radius: 50px;
+  padding: 15px 25px;
+  background-color: var(--purple);
+  cursor: pointer;
+  transition: all 0.55s ease-in-out;
+}
+.facility-section .btn-facility:hover{
+  background-color: #562da8;
+
+  transform: translateX(8px);
+}
+.facility-section a{
+  text-decoration: none;
+  color: white;
+  font-size: var(--1rem);
+
 }
 .medicine-grid {
   display: grid;
@@ -178,8 +236,14 @@ nav a:hover::after {
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  background-color: white;
+  position: relative;
+  transition: all 0.3s ease-in-out;
 }
-
+.medicine-items:hover {
+  top: -5px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
 .medicine-items img {
   width: 100%;
   border-radius: 10px 10px 0 0;
@@ -190,12 +254,13 @@ nav a:hover::after {
   margin: 0;
   padding: 10px;
 }
-/* Doctors Section End */
+/* Facility Section End */
 
 /* Testimonial Section */
 .testimonial-section {
   padding: var(--2rem);
   text-align: center;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 .testimonial-section h3 {
   font-size: var(--1setengah);
@@ -206,15 +271,22 @@ nav a:hover::after {
   grid-template-columns: repeat(4, 1fr);
   gap: var(--1rem);
 }
+
 .testimonial-items {
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  height: 400px;
+  transition: all 0.3s ease-in-out;
+  padding: 20px;
 }
-
 .testimonial-items img {
-  width: 100%;
-  border-radius: 10px 10px 0 0;
+  width: 70%;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+.testimonial-items img:hover{
+  transform: scale(1.03);
 }
 .testimonial-items-text {
   margin: 0;
@@ -223,6 +295,8 @@ nav a:hover::after {
 .testimonial-items h3 {
   font-size: var(--1rem);
   font-weight: var(--font-semibold);
+  margin: 0;
+  font-size: 23px;
 }
 .testimonial-items p {
   font-size: var(--1rem);
@@ -233,11 +307,12 @@ nav a:hover::after {
 
 /* Footer */
 footer {
-  background-color: #333;
+  background-color: #404040;
   color: var(--primary);
   padding: var(--2rem);
   max-height: 370px;
   max-width: 100vdh;
+  position: sticky;
 }
 .footer-left h3 {
   margin: 0;
@@ -250,7 +325,7 @@ footer {
 .footer-right {
   display: flex;
   justify-content: space-around;
-  height: 180px ;
+  height: 180px;
 }
 .footer-grid h4 {
   font-weight: var(--font-semibold);
@@ -282,30 +357,39 @@ footer {
 .footer-link:hover::after {
   width: 100%;
 }
-.footer-link:hover{
+.footer-link:hover {
   color: var(--orange);
 }
 .footer-bottom {
   text-align: center;
 }
-.location{
+.location {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 600px;
 }
-iframe{
+iframe {
   height: 100%;
   width: 100%;
   margin-left: 30px;
+  border-radius: 5px;
 }
-.social-media{
+.social-media {
   height: 60px;
   background-color: rgb(68, 68, 68);
   width: 100%;
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.fa-brands{
-  width: 100px;
+.fa-brands {
+  color: white;
+  margin: 0 6px;
+  transition: all 0.3s ease;
+}
+.fa-brands:hover {
+  color: var(--orange);
 }
 /* Footer End */

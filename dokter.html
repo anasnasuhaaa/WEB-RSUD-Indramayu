@@ -1,162 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dokter RSUD Indramayu</title>
-    <link rel="stylesheet" href="css/dokter.css">
+    <link rel="stylesheet" href="css/dokter.css" />
 
-       <!-- Icon -->
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-   <!-- Navigation Bar -->
-<header>
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Animate -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+     <!-- Navigation Bar -->
+  <header>
     <div class="logo">
-        <img src="img/RSUD.png" alt="">
+      <img src="img/RSUD.png" alt="" />
     </div>
     <nav>
-        <ul>
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="dokter.html">Find Doctors</a>
-            </li>
-            <li>
-                <a href="#">About</a>
-            </li>
-        </ul>
+      <ul>
+        <li>
+          <a href="index.html" class="nav-link">Beranda</a>
+        </li>
+        <li>
+          <a href="dokter.html" class="nav-link">Cari Dokter</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link">Tentang</a>
+        </li>
+        <li>
+          <a href="#" class="login">Login</a>
+        </li>
+      </ul>
     </nav>
-</header>
-<!-- Docotor Page -->
-<section class="find-doctor">
-    <form class="form-doctor">
+  </header>
+  <!-- Navigation Bar End -->
+    <section class="find-doctor">
+      <form class="form-doctor animate__animated animate__fadeInLeft">
         <h3>Cari Dokter</h3>
         <div class="search">
-            <span>Nama Dokter</span>
-            <div class="cari">
-            <input type="search" class="search-column column" placeholder="Cari Nama Dokter">
-            <button class="btn-search column"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
+          <span>Nama Dokter</span>
+          <div class="cari">
+            <input
+              type="search"
+              class="search-column column"
+              placeholder="Cari Nama Dokter"
+            />
+            <button class="btn-search column">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
         </div>
         <div class="select-spesialist">
-            <span>Spesialisasi</span>
-            <select class="column">
-                <option value="0">Semua</option>
-                <option value="1">Bedah</option>
-                <option value="3">Jiwa</option>
-                <option value="4">THT</option>
-                <option value="5">Anak</option>
-            </select>
+          <span>Spesialisasi</span>
+          <select class="column">
+            <option value="0">Semua</option>
+            <option value="1">Bedah</option>
+            <option value="3">Jiwa</option>
+            <option value="4">THT</option>
+            <option value="5">Anak</option>
+          </select>
         </div>
         <div class="hari">
-            <span>Pilih Hari Kunjungan</span>
-            <select name="hari" class="column">
-                <option value="0">Semua</option>
-                <option value="1">Senin</option>
-                <option value="2">Selasa</option>
-                <option value="3">Rabu</option>
-                <option value="4">Kamis</option>
-                <option value="5">Jum'at</option>
-                <option value="6">Sabtu</option>
-                <option value="7">Ahad</option>
-            </select>
+          <span>Pilih Hari Kunjungan</span>
+          <select name="hari" class="column">
+            <option value="0">Semua</option>
+            <option value="1">Senin</option>
+            <option value="2">Selasa</option>
+            <option value="3">Rabu</option>
+            <option value="4">Kamis</option>
+            <option value="5">Jum'at</option>
+            <option value="6">Sabtu</option>
+            <option value="7">Ahad</option>
+          </select>
         </div>
-    </label>
-    </form>
+        <div class="jam">
+          <span>Jam Kerja</span>
+          <br>
+          <input type="radio" id="pagi" name="jam-kerja1" value="pagi" />
+          <label for="html">08:00-12:00 WIB</label><br />
+          <input type="radio" id="siang" name="jam-kerja2" value="siang" />
+          <label for="html">13:00-17:00 WIB</label><br />
+          <input type="radio" id="css" name="jam-kerja3" value="sore" />
+          <label for="sore">19:00-23:00 WIB</label>
+        </div>
+      </form>
 
-    <div class="foto-doctor">
+      <div class="foto-doctor animate__animated animate__fadeInRight">
         <h3>Daftar Dokter Di RSUD Kabupaten Indramayu</h3>
         <div class="medicine-grid">
-            
-            <div class="medicine-items">
-                <img src="img/dokter02.jpg" alt="Doctors 1">
-                <button class="accordion">dr. Ayu Lestari, Sp.A</button>
-                <div class="panel">
-                    <p>Dokter profresional lulusan Fakultas Kedokteran UI dengan jurusan Ilmu Kesehatan Anak, berpengalaman selama lebih dari 5 tahun dalam menangani segala kasus anak</p>
-                  </div>
+          <div class="medicine-items">
+            <img src="img/dokter02.jpg" alt="Doctors 1" />
+            <button class="accordion">dr. Ayu Lestari, Sp.A</button>
+            <div class="panel">
+              <p>
+                Dokter profresional lulusan Fakultas Kedokteran UI dengan
+                jurusan Ilmu Kesehatan Anak, berpengalaman selama lebih dari 5
+                tahun dalam menangani segala kasus anak
+              </p>
             </div>
-            <div class="medicine-items">
-                <img src="img/dokter04.jpg" alt="Doctors 2">
-                <button class="accordion">dr. Annisa Rahmania Yulman, Sp.A</button>
-                <div class="panel">
-                    <p>Dokter profresional lulusan terbaik Fakultas Kedokteran UGM tahun 2015. Berpengalaman selama lebih dari 7 tahun dalam menangani segala kasus khususnya yang terkait dengan anak</p>
-                  </div>
+          </div>
+          <div class="medicine-items">
+            <img src="img/dokter04.jpg" alt="Doctors 2" />
+            <button class="accordion">dr. Annisa Rahmania Yulman, Sp.A</button>
+            <div class="panel">
+              <p>
+                Dokter profresional lulusan terbaik Fakultas Kedokteran UGM
+                tahun 2015. Berpengalaman selama lebih dari 7 tahun dalam
+                menangani segala kasus khususnya yang terkait dengan anak
+              </p>
             </div>
-            <div class="medicine-items">
-                <img src="img/dokterlanang02.jpg" alt="Doctors 3">
-                <button class="accordion">dr. Yudhistira, Sp.PK</button>
-                <div class="panel">
-                  <p>Dokter Profesianal lulusan Harvard</p>
-                </div>
+          </div>
+          <div class="medicine-items">
+            <img src="img/dokterlanang02.jpg" alt="Doctors 3" />
+            <button class="accordion">dr. Yudhistira, Sp.PK</button>
+            <div class="panel">
+              <p>Dokter Profesianal lulusan Harvard</p>
             </div>
-            <div class="medicine-items">
-                <img src="img/dokterlanang01.jpg" alt="Doctors 4">
-                <button class="accordion">dr. Andy Omega, Sp.An</button>
-                <div class="panel">
-                  <p>Dokter Profesional spesialis Patalogi Anatomi</p>
-                </div>
+          </div>
+          <div class="medicine-items">
+            <img src="img/dokterlanang01.jpg" alt="Doctors 4" />
+            <button class="accordion">dr. Andy Omega, Sp.An</button>
+            <div class="panel">
+              <p>Dokter Profesional spesialis Patalogi Anatomi</p>
             </div>
-            <div class="medicine-items">
-                <img src="img/dokterlanang03.jpg" alt="Doctors 1">
-                <button class="accordion">dr. Darwin Harpin, Sp.Ak</button>
-                <div class="panel">
-                  <p>Dokter Profesiaonal, sudah berpengalamana menangani pasien selama lebih dari 20 tahun</p>
-                </div>
+          </div>
+          <div class="medicine-items">
+            <img src="img/dokterlanang03.jpg" alt="Doctors 1" />
+            <button class="accordion">dr. Darwin Harpin, Sp.Ak</button>
+            <div class="panel">
+              <p>
+                Dokter Profesiaonal, sudah berpengalamana menangani pasien
+                selama lebih dari 20 tahun
+              </p>
             </div>
-            <div class="medicine-items">
-                <img src="img/dokterlanang05.jpg" alt="Doctors 2">
-                <button class="accordion">dr. Adi Saputra, Sp.B</button>
-                <div class="panel">
-                  <p>Dokter Profesional spesialis bedah, berpengalaman menangani pasien selama lebih dari 17 tahun</p>
-                </div>
+          </div>
+          <div class="medicine-items">
+            <img src="img/dokterlanang05.jpg" alt="Doctors 2" />
+            <button class="accordion">dr. Adi Saputra, Sp.B</button>
+            <div class="panel">
+              <p>
+                Dokter Profesional spesialis bedah, berpengalaman menangani
+                pasien selama lebih dari 17 tahun
+              </p>
             </div>
-            <div class="medicine-items">
-                <img src="img/dokter05.jpg" alt="Doctors 3">
-                <button class="accordion">dr. Gisela Haza Anissa, Sp.M</button>
-                <div class="panel">
-                  <p>Dokter Profesional, lulusan terbaik Fakultas Kedoteran UI tahun 2020</p>
-                </div>
+          </div>
+          <div class="medicine-items">
+            <img src="img/dokter05.jpg" alt="Doctors 3" />
+            <button class="accordion">dr. Gisela Haza Anissa, Sp.M</button>
+            <div class="panel">
+              <p>
+                Dokter Profesional, lulusan terbaik Fakultas Kedoteran UI tahun
+                2020
+              </p>
             </div>
-            <div class="medicine-items">
-                <img src="img/dokter03.jpg" alt="Doctors 4">
-                <button class="accordion">dr. Mila Maidarti, Sp.OG(K), PhD</button>
-                <div class="panel">
-                  <p>Dokter Profesional, lulusan terbaik ke-3 di University of Harvard 2019</p>
-                </div>
+          </div>
+          <div class="medicine-items">
+            <img src="img/dokter03.jpg" alt="Doctors 4" />
+            <button class="accordion">dr. Mila Maidarti, Sp.OG(K), PhD</button>
+            <div class="panel">
+              <p>
+                Dokter Profesional, lulusan terbaik ke-3 di University of
+                Harvard 2019
+              </p>
             </div>
-            <div class="medicine-items">
-                <img src="img/dokterlanang07.jpg" alt="Doctors 1">
-                <button class="accordion">dr. A. J. Primaditya Wardhana, Sp.B</button>
-                <div class="panel">
-                  <p>Dokter Bedah tersohor di RSUD Indramayu sejak 1995</p>
-                </div>
+          </div>
+          <div class="medicine-items">
+            <img src="img/dokterlanang07.jpg" alt="Doctors 1" />
+            <button class="accordion">
+              dr. A. J. Primaditya Wardhana, Sp.B
+            </button>
+            <div class="panel">
+              <p>Dokter Bedah tersohor di RSUD Indramayu sejak 1995</p>
             </div>
-            <div class="medicine-items">
-                <img src="https://rs.ui.ac.id/assets/document/profil/1677736758.png" alt="Doctors 2">
-                <button class="accordion">dr. R. Fera Ibrahim, M.Sc, Ph.D, Sp.MK(K)</button>
-                <div class="panel">
-                  <p>Dokter Profesional dengan keahlian Mikrobiologi Klinik, berpengalaman selama lebih dari 15 tahun</p>
-                </div>
+          </div>
+          <div class="medicine-items">
+            <img
+              src="https://rs.ui.ac.id/assets/document/profil/1677736758.png"
+              alt="Doctors 2"
+            />
+            <button class="accordion">
+              dr. R. Fera Ibrahim, M.Sc, Ph.D, Sp.MK(K)
+            </button>
+            <div class="panel">
+              <p>
+                Dokter Profesional dengan keahlian Mikrobiologi Klinik,
+                berpengalaman selama lebih dari 15 tahun
+              </p>
             </div>
-            <div class="medicine-items">
-                <img src="https://rs.ui.ac.id/assets/document/profil/1677737574.png" alt="Doctors 3">
-                <button class="accordion">dr. Zarah Tin Cahyaningrum</button>
-                <div class="panel">
-                  <p>Dokter Profesional yang berperan sebagai dokter umum</p>
-                </div>
+          </div>
+          <div class="medicine-items">
+            <img
+              src="https://rs.ui.ac.id/assets/document/profil/1677737574.png"
+              alt="Doctors 3"
+            />
+            <button class="accordion">dr. Zarah Tin Cahyaningrum</button>
+            <div class="panel">
+              <p>Dokter Profesional yang berperan sebagai dokter umum</p>
             </div>
-            <div class="medicine-items">
-                <img src="https://rs.ui.ac.id/assets/document/profil/1677735649.png" alt="Doctors 4">
-                <button class="accordion">dr. Yayi Dwina Billianti Susanto, M.Biomed, Sp.PA(K)</button>
-                <div class="panel">
-                  <p>Dokter Profesional spesialis Patalogi Anatomik</p>
-                </div>
+          </div>
+          <div class="medicine-items">
+            <img
+              src="https://rs.ui.ac.id/assets/document/profil/1677735649.png"
+              alt="Doctors 4"
+            />
+            <button class="accordion">
+              dr. Yayi Dwina, M.Biomed, Sp.PA(K)
+            </button>
+            <div class="panel">
+              <p>Dokter Profesional spesialis Patalogi Anatomik</p>
             </div>
+          </div>
         </div>
-    </div>
-</section>
-<!-- Docotor Page End -->
-</body>
+      </div>
+    </section>
+    <!-- Docotor Page End -->
+    <!-- Footer -->
+    <footer>
+      <div class="footer-left">
+        <h3>RSUD Indramayu</h3>
+        <p>Melayani Dengan Sepenuh Hati</p>
+      </div>
+      <div class="info">
+        <div class="footer-right">
+          <!-- Grid 1 -->
+          <div class="footer-grid">
+            <h4>Layanan</h4>
+            <ul>
+              <li>
+                <a class="footer-link" href="#">UGD</a>
+              </li>
+              <li>
+                <a class="footer-link" href="#">Rawat Inap</a>
+              </li>
+              <li>
+                <a class="footer-link" href="#">Rawat Jalan</a>
+              </li>
+              <li>
+                <a class="footer-link" href="#">Medichal CeckUp</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Grid 2 -->
+          <div class="footer-grid footer-grid-2">
+            <h4>Informasi</h4>
+            <ul>
+              <li>
+                <a class="footer-link footer-link-2" href="#">FAQ</a>
+              </li>
+              <li>
+                <a class="footer-link footer-link-2" href="#">Karir</a>
+              </li>
+              <li>
+                <a class="footer-link footer-link-2" href="#"
+                  >Corporate Partnership</a
+                >
+              </li>
+              <li>
+                <a class="footer-link footer-link-2" href="#"
+                  >Syarat & Ketentuan</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Grid 2 -->
+          <div class="footer-grid location">
+            <h4>
+              Jl. Murahnara No.7, Sindang, Kec. Indramayu, Kabupaten Indramayu,
+              Jawa Barat 45222
+            </h4>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.4968018104637!2d108.31930277607341!3d-6.329614761936088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6eb957ef43ab4d%3A0x2436dd8079b0217a!2sRumah%20Sakit%20Umum%20Daerah%20Kabupaten%20Indramayu!5e0!3m2!1sid!2sid!4v1690883000898!5m2!1sid!2sid"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="social-media">
+        <a href=""><i class="fa-brands fa-facebook fa-3x"></i></a>
+        <a href=""><i class="fa-brands fa-instagram fa-3x"></i></a>
+        <a href=""><i class="fa-brands fa-blogger fa-3x"></i></a>
+        <a href=""><i class="fa-brands fa-twitter fa-3x"></i></a>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-reserved">
+          <p>Created by Anas Nasuha - 2023</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+  </body>
 </html>

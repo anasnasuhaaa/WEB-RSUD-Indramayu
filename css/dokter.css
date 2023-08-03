@@ -16,6 +16,7 @@
 }
 * {
   font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
@@ -103,10 +104,10 @@ nav .nav-link:hover::after {
 
 /* Cari Dokter */
 .find-doctor {
-  margin: 10px 0;
+  margin: 6px 0 0 0;
   display: flex;
   align-items: start;
-  padding: 10px;
+  padding: 0 10px 10px 10px;
 }
 .form-doctor {
   padding: 20px;
@@ -182,6 +183,7 @@ nav .nav-link:hover::after {
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   padding: 20px;
+  margin-top: 2px;
 }
 .foto-doctor h3 {
   font-size: 30px;

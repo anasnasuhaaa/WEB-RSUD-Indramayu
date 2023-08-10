@@ -18,16 +18,17 @@
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
 }
+html,
 body {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   line-height: 1.6;
 }
 
-
 /* Navigation Bar */
-header {
+nav {
   /* Glass */
   background: rgba(255, 255, 255, 0.23);
   border-radius: 16px;
@@ -39,19 +40,19 @@ header {
   padding: 1rem;
   text-align: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   position: sticky;
   top: 0;
   border-bottom: 1px solid rgb(194, 194, 194);
-  z-index: 9999;
   width: 100%;
 }
 .logo {
+  height: 80px;
+  margin: 0;
+  max-width: 160px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-left: 20px;
 }
 .logo img {
   height: 60px;
@@ -59,12 +60,13 @@ header {
 nav ul {
   list-style-type: none;
   display: flex;
+  align-items: center;
   margin: 0;
 }
 nav li {
   margin-right: 30px;
 }
-nav .nav-link{
+nav .nav-link {
   color: var(--secondary);
   text-decoration: none;
   font-family: "Poppins", sans-serif !important;
@@ -85,8 +87,57 @@ nav .nav-link::after {
 nav .nav-link:hover::after {
   width: 100%;
 }
+/* Hamburger menu */
+.menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  padding: 1px 5px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+.menu span {
+  display: block;
+  width: 32px;
+  height: 3px;
+  background-color: var(--purple);
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+/* Hamburger menu */
+#check {
+  height: 28px;
+  width: 42px;
+  position: absolute;
+  opacity: 0;
+  right: 1px;
+  left: -0.1px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Animasi Hamburger menu */
+.menu span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+.menu input:checked ~ span:nth-child(2) {
+  background-color: var(--orange);
+  transform: rotate(45deg) translate(2.5px, -5px);
+}
+.menu input:checked ~ span:nth-child(4) {
+  background-color: var(--orange);
+  transform: rotate(-45deg) translate(0, 6px);
+}
+.menu input:checked ~ span:nth-child(3) {
+  background-color: var(--orange);
+  transform: scale(0);
+}
 /* Login */
-.login{
+.login {
   background-color: var(--purple);
   padding: 10px 20px;
   text-decoration: none;
@@ -96,8 +147,8 @@ nav .nav-link:hover::after {
   font-weight: var(--font-bold);
   letter-spacing: 1px;
 }
-.login:hover{
-  background-color:rgb(83, 23, 138);
+.login:hover {
+  background-color: rgb(83, 23, 138);
 }
 /* Login End */
 /* Navigation Bar End*/
@@ -112,9 +163,8 @@ nav .nav-link:hover::after {
 .form-doctor {
   padding: 20px;
   height: 100%;
+  top: 0;
   position: sticky;
-  top: 100px;
-  z-index: 1;
   background-color: var(--purple);
   width: 25%;
   border-radius: 5px;
@@ -166,10 +216,10 @@ nav .nav-link:hover::after {
 .btn-search:hover {
   background-color: #cccc;
 }
-.jam span{
+.jam span {
   margin-bottom: 2px;
 }
-.jam label{
+.jam label {
   color: white;
   font-size: 12px;
 }
@@ -184,6 +234,7 @@ nav .nav-link:hover::after {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   padding: 20px;
   margin-top: 2px;
+  z-index: -1;
 }
 .foto-doctor h3 {
   font-size: 30px;
@@ -242,13 +293,12 @@ nav .nav-link:hover::after {
 /* Cari Dokter End */
 /* Footer */
 footer {
+  display: block;
   background-color: #404040;
   color: var(--primary);
   padding: var(--2rem) var(--2rem) 17px var(--2rem);
-  max-height: 370px;
-  height: 350px;
+  height: 100%;
   max-width: 100vdh;
-  top: 1750px;
   z-index: -999;
 }
 .footer-left h3 {
@@ -300,7 +350,7 @@ footer {
 .footer-bottom {
   text-align: center;
 }
-.footer-bottom-reserved p{
+.footer-bottom-reserved p {
   margin: 0;
   padding: 15px 0 10px 0;
 }
@@ -335,3 +385,147 @@ iframe {
 }
 /* Footer End */
 
+/* Responsive */
+/* Tablet 768px */
+@media (max-width: 768px) {
+  .find-doctor {
+    flex-direction: column;
+  }
+  /* Navbar */
+  .ul-nav {
+    width: 50%;
+  }
+  .ul-nav li a {
+    font-size: 12px;
+  }
+  .logo img {
+    height: 70% !important;
+    width: auto;
+  }
+  /* Navbar End */
+  /* Filter */
+  .form-doctor {
+    top: 0;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+  }
+  .filter-doctor {
+    display: grid;
+    padding: 0 20px;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* Filter End */
+  /* Foto Dokter */
+  .medicine-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .form-doctor,
+  .foto-doctor {
+    margin: 0;
+    padding: 0;
+  }
+  .foto-doctor {
+    width: 100%;
+  }
+  .foto-doctor h3 {
+    font-size: 24px;
+  }
+  /* Foto Dokter End */
+  /* Footer */
+  footer {
+    margin-top: 1480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 900px !important;
+  }
+  .footer-right {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .info {
+    position: relative;
+    top: -100px;
+  }
+  .location {
+    margin-top: 25px;
+    padding: 20px;
+    width: 100%;
+  }
+  .social-media {
+    position: relative;
+    top: 230px;
+  }
+  .footer-bottom {
+    position: relative;
+    top: 90px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 512px) {
+  /* Foto Doctor */
+  /* Navbar */
+  nav {
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+  }
+  .menu {
+    display: flex;
+    margin-right: 30px;
+  }
+  .ul-nav {
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-evenly;
+    right: 0;
+    z-index: 9 !important;
+    top: 0;
+    margin-top: 67px;
+    height: 90vh;
+    width: 100%;
+    background-color: var(--purple);
+    transform: translateX(100%);
+    transition: all 1s ease;
+    opacity: 0;
+  }
+  .ul-nav.slide {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .ul-nav li a {
+    font-size: 11px;
+    color: white;
+  }
+  nav .nav-link::after {
+    background-color: var(--primary);
+  }
+  nav .menu {
+    display: block !important;
+    position: relative;
+    right: 10px;
+    z-index: -1;
+  }
+  .logo img {
+    height: 60% !important;
+    width: auto;
+  }
+}
+/* Navbar End */
+.form-doctor{
+  position: relative;
+  z-index: -1;
+}
+.accordion {
+  font-size: 1px;
+}
+.panel p {
+  font-size: 10px;
+}
+
+/* Responsive End */

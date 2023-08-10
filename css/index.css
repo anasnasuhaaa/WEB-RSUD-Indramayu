@@ -16,7 +16,7 @@
 }
 * {
   font-family: "Inter", sans-serif;
- overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 body {
   margin: 0;
@@ -40,18 +40,14 @@ nav {
   padding: 1rem;
   text-align: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   position: sticky;
   top: 0;
   border-bottom: 1px solid rgb(194, 194, 194);
-  z-index: 9999;
   width: 100%;
-}
-.fa-bars{
-  color: var(--purple);
-  font-size: 40px;
-}
+  
+} 
 .logo {
   height: 80px;
   margin: 0;
@@ -64,14 +60,14 @@ nav {
 }
 nav ul {
   list-style-type: none;
-  margin: 0;
   display: flex;
   align-items: center;
+  margin: 0;
 }
 nav li {
   margin-right: 30px;
 }
-nav .nav-link{
+nav .nav-link {
   color: var(--secondary);
   text-decoration: none;
   font-family: "Poppins", sans-serif !important;
@@ -92,11 +88,59 @@ nav .nav-link::after {
 nav .nav-link:hover::after {
   width: 100%;
 }
+/* Hamburger menu */
 .menu {
   display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  padding: 1px 5px;
+  border-radius: 5px;
+  transition: 0.2s;
 }
+.menu span {
+  display: block;
+  width: 32px;
+  height: 3px;
+  background-color: var(--purple);
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+/* Hamburger menu */
+#check {
+  height: 28px;
+  width: 42px;
+  position: absolute;
+  opacity: 0;
+  right: 1px;
+  left: -0.1px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Animasi Hamburger menu */
+.menu span:nth-child(2){
+  transform-origin: 0 0;
+}
+.menu span:nth-child(4){
+  transform-origin: 0 100%;
+}
+.menu input:checked ~ span:nth-child(2){
+  background-color: var(--orange);
+  transform: rotate(45deg) translate(2.5px, -5px);
+}
+.menu input:checked ~ span:nth-child(4){
+  background-color: var(--orange);
+  transform: rotate(-45deg) translate(0, 6px);
+}
+.menu input:checked ~ span:nth-child(3){
+  background-color: var(--orange);
+  transform: scale(0);
+}
+/* Animasi Hamburger menu End */
+
 /* Login */
-.login{
+.login {
   background-color: var(--purple);
   padding: 10px 20px;
   text-decoration: none;
@@ -106,22 +150,23 @@ nav .nav-link:hover::after {
   font-weight: var(--font-bold);
   letter-spacing: 1px;
 }
-.login:hover{
-  background-color:rgb(83, 23, 138);
+.login:hover {
+  background-color: rgb(83, 23, 138);
 }
 /* Login End */
 /* Navigation Bar End*/
 
 /* Hero Section */
 .hero-section {
-  height: 1000px;
+  height: 100vh;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   background-position: center;
   display: flex;
   justify-content: start;
   align-items: center;
-  z-index: 9;
   animation: animate 15s ease-in-out infinite;
+  position: relative;
+  z-index: -999 !important;
 }
 @keyframes animate {
   0%,
@@ -136,8 +181,8 @@ nav .nav-link:hover::after {
   }
   75% {
     background-image: url(/img/bgimage/bg4.png);
-  }
-}
+  } 
+} 
 .hero-content {
   text-align: left;
   margin-left: 90px;
@@ -159,7 +204,6 @@ nav .nav-link:hover::after {
   justify-content: space-between;
   align-items: center;
   margin-top: 35px;
-  min-width: 600px;
   font-family: "poppins", sans-serif !important;
 }
 .btn .btn-about {
@@ -195,7 +239,7 @@ nav .nav-link:hover::after {
 /* Hero Section End */
 
 /* Reason section */
-.reason{
+.reason {
   z-index: -1;
   margin-top: 8px;
   padding: 10px 50px 40px;
@@ -206,38 +250,39 @@ nav .nav-link:hover::after {
   flex-direction: column;
   justify-content: center;
 }
-.reason h1{
+.reason h1 {
   font-size: 30px;
 }
-.reason-grid{
+.reason-grid {
   display: flex;
   justify-self: center;
   align-items: center;
   margin-top: 25px;
 }
-.reason-icon{
+.reason-icon {
   font-size: 40px;
-  padding:10px 20px;
+  padding: 10px 20px;
   border-radius: 50%;
   border: 2px solid rgb(164, 99, 255);
   color: var(--purple);
   transition: all 0.3s ease;
 }
-.fa-users{
-font-size: 33px !important;
+.fa-users {
+  font-size: 33px !important;
 }
-.reason-icon:hover{
+.reason-icon:hover {
   color: white;
   background-color: var(--purple);
 }
-.description{
+.description {
   margin-left: 20px;
 }
-.description h2, .description p{
+.description h2,
+.description p {
   margin: 0;
   line-height: 1.7;
 }
-.btn-reason{
+.btn-reason {
   margin-left: 100px;
   margin-top: 5px;
   padding: 12px 20px;
@@ -249,7 +294,7 @@ font-size: 33px !important;
   color: white;
   transition: all 0.55s ease-in-out;
 }
-.btn-reason:hover{
+.btn-reason:hover {
   background-color: #562da8;
   transform: translatey(-8px);
 }
@@ -260,7 +305,7 @@ font-size: 33px !important;
   padding: var(--2rem);
   text-align: center;
   background-image: url(/img/imgfacility/facility-background.png);
-  display:flex ;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -269,7 +314,7 @@ font-size: 33px !important;
   font-size: 36px;
   font-weight: var(--font-semibold);
   letter-spacing: 1px;
-  max-width:200px;
+  max-width: 200px;
   color: black;
   padding: 10px 20px;
   margin: 0 auto;
@@ -278,7 +323,7 @@ font-size: 33px !important;
   margin-bottom: 20px;
   text-align: center;
 }
-.facility-section .btn-facility{
+.facility-section .btn-facility {
   margin-top: 20px;
   border-radius: 50px;
   padding: 15px 25px;
@@ -286,15 +331,14 @@ font-size: 33px !important;
   cursor: pointer;
   transition: all 0.55s ease-in-out;
 }
-.facility-section .btn-facility:hover{
+.facility-section .btn-facility:hover {
   background-color: #562da8;
   transform: translateX(8px);
 }
-.facility-section a{
+.facility-section a {
   text-decoration: none;
   color: white;
   font-size: var(--1rem);
-
 }
 .medicine-grid {
   display: grid;
@@ -308,7 +352,7 @@ font-size: 33px !important;
   background-color: white;
   position: relative;
   transition: all 0.3s ease-in-out;
-  transition-delay:0s;
+  transition-delay: 0s;
 }
 .medicine-items:hover {
   transform: translateY(-20px);
@@ -317,6 +361,7 @@ font-size: 33px !important;
 .medicine-items img {
   width: 100%;
   border-radius: 10px 10px 0 0;
+  z-index: -1;
 }
 .medicine-items p {
   font-size: var(--1rem);
@@ -355,7 +400,7 @@ font-size: 33px !important;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
 }
-.testimonial-items img:hover{
+.testimonial-items img:hover {
   transform: scale(1.03);
 }
 .testimonial-items-text {
@@ -377,13 +422,12 @@ font-size: 33px !important;
 
 /* Footer */
 footer {
+  display: block;
   background-color: #404040;
   color: var(--primary);
   padding: var(--2rem) var(--2rem) 17px var(--2rem);
-  max-height: 370px;
-  height: 330px;
+  height: 100%;
   max-width: 100vdh;
-  top: 1750px;
   z-index: -999;
 }
 .footer-left h3 {
@@ -435,7 +479,7 @@ footer {
 .footer-bottom {
   text-align: center;
 }
-.footer-bottom-reserved p{
+.footer-bottom-reserved p {
   margin: 0;
   padding: 15px 0 10px 0;
 }
@@ -471,56 +515,95 @@ iframe {
 /* Footer End */
 /* RESPONSIVE */
 
-@media (max-width:800px){
-  nav ul li a{
-    font-size: 13px; ;
+@media (max-width: 800px) {
+  .ul-nav li a {
+    font-size: 13px;
   }
 }
 /* TABLET */
-@media (max-width:768px){
-  .hero-section{
+@media (max-width: 768px) {
+  html {
+    overflow-x: hidden;
+  }
+  nav{
+    height: fit-content
+  };
+  .ul-nav{
+    width: 50%; 
+  }
+  .ul-nav li a{
+    font-size: 12px;
+  }
+  .logo img {
+    height: 70% !important;
+    width: auto;
+  }
+  /* Hero dection */
+  .hero-section {
+    background-image: url(/img/bgimage/responsive-bg.png);
     background-size: cover;
   }
-  .hero-content h1{
-    font-size: 50px;
+  .hero-content {
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    width: fit-content;
   }
-  .medicine-grid{
-    grid-template-columns: repeat(2,1fr);
+  .hero-content h1 {
+    font-size: 45px;
   }
-  .testimonial-grid{
-    grid-template-columns: repeat(2,1fr)
+  .hero-content p {
+    font-size: 22px;
   }
-  .btn-grid{
+  .btn {
+    width: 100%;
+  }
+  .btn button {
+    padding: 12px 25px !important;
+    font-size: 13px;
+  }
+  /* Hero dection End */
+  .medicine-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .btn-grid {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .reason{
+  .reason {
     padding: 10px;
+    height: max-content;
   }
-  .reason h1{
+  .reason h1 {
     line-height: 2;
-    margin:0 ;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .description{
-    margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; 
-  text-align: center;
+  .btn-reason {
+    padding: 15px 30px !important;
   }
-  .description h2{
+  .description {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .description h2 {
     display: flex;
     align-items: center;
     line-height: 2;
     margin-bottom: 3px;
     font-size: 16px;
   }
-  .description p{
+  .description p {
     line-height: 2;
     font-size: 12px;
     display: flex;
@@ -529,37 +612,156 @@ iframe {
     align-items: center;
     margin-top: 3px;
   }
-  .btn-reason{
-    margin:0 auto;
+  .btn-reason {
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px 30px;
   }
-  .reason-grid{
+  .reason-grid {
     margin-bottom: 10px;
     flex-direction: column;
   }
-  .reason-icon{
+  .reason-icon {
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
     border-radius: 0;
   }
+  /* Footer Responsive */
+  .footer-right {
+    justify-content: space-between;
+  }
+  .location h4 {
+    font-size: 14px;
+  }
+  .location iframe {
+    height: 70% !important;
+    width: 50% !important;
+  }
+  .footer-grid ul li a {
+    font-size: 12px;
+  }
+}
 /* Mobile */
-@media only screen and (max-width:600px){
-  .medicine-grid{
-    grid-template-columns: repeat(1,1fr);
+@media only screen and (max-width: 512px) {
+  nav {
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
   }
-  .testimonial-grid{
-    grid-template-columns: repeat(1,1fr)
+  .menu{
+    display: flex;
+    margin-right: 30px;
   }
-  .description h2{
+  .ul-nav {
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-evenly;
+    right: 0;
+    z-index:-1;
+    top: 0;
+    margin-top: 67px;
+    height: 90vh;
+    width: 100%;
+    background-color: var(--purple);
+  transform: translateX(100%);
+  transition: all 1s ease;
+  opacity: 0;
+  }
+  .ul-nav.slide{
+    transform: translateX(0);
+    opacity: 1;
+  }
+.ul-nav li a{
+  font-size: 11px;
+  color: white;
+}
+  nav .nav-link::after {
+    background-color: var(--primary);
+  }
+  nav .menu {
+    display: block !important;
+    position: relative;
+    right: 10px;
+    z-index: -1;
+  }
+  .logo img {
+    height: 60% !important;
+    width: auto;
+  }
+.hero-section{
+  height: 100vh !important;
+}
+  .hero-content {
+    width: 100%;
+    padding: 0;
+    height: 50vh;
+    padding: 0 10px;
+  }
+  .hero-content h1{
+    font-size: 30px !important;
+  }
+  .btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .btn-about{
+    margin: 0 0 20px 0 !important;
+  }
+  .btn-about, .btn-find-doctor{
+    padding: 9px 20px !important;
+  }
+  .hero-content h1 {
+    font-size: 35px;
+  }
+  .hero-content p {
+    font-size: 16px;
+  }
+  .medicine-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .testimonial-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .description h2 {
     font-size: 15px;
   }
-  .description p{
+  .description p {
     font-size: 11px;
   }
 
+  /* Footer Responsive */
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 900px !important;
+  }
+  .footer-right {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .info {
+    position: relative;
+    top: -100px;
+  }
+  .location {
+    margin-top: 25px;
+    padding: 20px;
+    width: 100%;
+  }
+  .social-media {
+    position: relative;
+    top: 230px;
+  }
+  .footer-bottom {
+    position: relative;
+    top: 90px;
+  }
 }

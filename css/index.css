@@ -46,8 +46,7 @@ nav {
   top: 0;
   border-bottom: 1px solid rgb(194, 194, 194);
   width: 100%;
-  
-} 
+}
 .logo {
   height: 80px;
   margin: 0;
@@ -119,21 +118,21 @@ nav .nav-link:hover::after {
 }
 
 /* Animasi Hamburger menu */
-.menu span:nth-child(2){
+.menu span:nth-child(2) {
   transform-origin: 0 0;
 }
-.menu span:nth-child(4){
+.menu span:nth-child(4) {
   transform-origin: 0 100%;
 }
-.menu input:checked ~ span:nth-child(2){
+.menu input:checked ~ span:nth-child(2) {
   background-color: var(--orange);
   transform: rotate(45deg) translate(2.5px, -5px);
 }
-.menu input:checked ~ span:nth-child(4){
+.menu input:checked ~ span:nth-child(4) {
   background-color: var(--orange);
   transform: rotate(-45deg) translate(0, 6px);
 }
-.menu input:checked ~ span:nth-child(3){
+.menu input:checked ~ span:nth-child(3) {
   background-color: var(--orange);
   transform: scale(0);
 }
@@ -166,7 +165,7 @@ nav .nav-link:hover::after {
   align-items: center;
   animation: animate 15s ease-in-out infinite;
   position: relative;
-  z-index: -999 !important;
+  z-index: -1;
 }
 @keyframes animate {
   0%,
@@ -181,8 +180,8 @@ nav .nav-link:hover::after {
   }
   75% {
     background-image: url(/img/bgimage/bg4.png);
-  } 
-} 
+  }
+}
 .hero-content {
   text-align: left;
   margin-left: 90px;
@@ -525,13 +524,13 @@ iframe {
   html {
     overflow-x: hidden;
   }
-  nav{
-    height: fit-content
-  };
-  .ul-nav{
-    width: 50%; 
+  nav {
+    height: fit-content;
   }
-  .ul-nav li a{
+  .ul-nav {
+    width: 50%;
+  }
+  .ul-nav li a {
     font-size: 12px;
   }
   .logo img {
@@ -653,7 +652,7 @@ iframe {
     width: 100%;
     height: 50px;
   }
-  .menu{
+  .menu {
     display: flex;
     margin-right: 30px;
   }
@@ -662,24 +661,24 @@ iframe {
     flex-direction: column;
     justify-content: space-evenly;
     right: 0;
-    z-index:-1;
+    z-index: -1;
     top: 0;
     margin-top: 81px;
     height: 100vh;
     width: 100%;
     background-color: var(--purple);
-  transform: translateX(100%);
-  transition: all 1s ease;
-  opacity: 0;
+    transform: translateX(100%);
+    transition: all 1s ease;
+    opacity: 0;
   }
-  .ul-nav.slide{
+  .ul-nav.slide {
     transform: translateX(0);
     opacity: 1;
   }
-.ul-nav li a{
-  font-size: 11px;
-  color: white;
-}
+  .ul-nav li a {
+    font-size: 11px;
+    color: white;
+  }
   nav .nav-link::after {
     background-color: var(--primary);
   }
@@ -693,16 +692,16 @@ iframe {
     height: 60% !important;
     width: auto;
   }
-.hero-section{
-  height: 100vh !important;
-}
+  .hero-section {
+    height: 100vh !important;
+  }
   .hero-content {
     width: 100%;
     padding: 0;
     height: 50vh;
     padding: 0 10px;
   }
-  .hero-content h1{
+  .hero-content h1 {
     font-size: 30px !important;
   }
   .btn {
@@ -710,10 +709,11 @@ iframe {
     flex-direction: column;
     justify-content: space-between;
   }
-  .btn-about{
+  .btn-about {
     margin: 0 0 20px 0 !important;
   }
-  .btn-about, .btn-find-doctor{
+  .btn-about,
+  .btn-find-doctor {
     padding: 9px 20px !important;
   }
   .hero-content h1 {
